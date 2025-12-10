@@ -11,7 +11,6 @@ Features:
 
 Tech Stack:
 Frontend: React  
-Backend: Django  
 AI: HuggingFace / OpenAI  
 Diff Library: diff-match-patch / difflib  
 
