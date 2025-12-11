@@ -6,13 +6,7 @@ from dotenv import load_dotenv
 
 # load .env
 load_dotenv()
-from flask import Flask
-import os
 
-app = Flask(__name__)
-app.secret_key = os.getenv("SECRET_KEY", "fallback-secret")
-
-'''
 from services.pdf_service import extract_text_from_file
 from services.diff_service import compute_diff_and_stats
 from services.ai_service import get_hf_summary
@@ -87,4 +81,4 @@ def summary():
 
 if __name__ == "__main__":
     # dev server
-    app.run(host="0.0.0.0", port=5000, debug=True)'''
+    app.run(host="0.0.0.0", port=5000, debug=True)
