@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const API_BASE = "https://ai-diff-backend.onrender.com/api";  Flask backend
+const API_BASE = "https://ai-diff-backend.onrender.com/api";  
 
 export const uploadDocuments = async (fileA, fileB) => {
   const formData = new FormData();
