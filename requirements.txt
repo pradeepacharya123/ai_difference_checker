@@ -3,3 +3,4 @@ python-dotenv
 pdfplumber
 requests
 Flask-CORS
+gunicorn
