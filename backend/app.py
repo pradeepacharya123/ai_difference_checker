@@ -7,10 +7,11 @@ from dotenv import load_dotenv
 # load .env
 load_dotenv()
 
-from services.pdf_service import extract_text_from_file
-from services.diff_service import compute_diff_and_stats
-from services.ai_service import get_hf_summary
-from utils.file_handler import save_uploaded_file
+from backend.services.pdf_service import extract_text_from_file
+from backend.services.diff_service import compute_diff_and_stats
+from backend.services.ai_service import get_hf_summary
+from backend.utils.file_handler import save_uploaded_file
+
 
 
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
