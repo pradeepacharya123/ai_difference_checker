@@ -7,10 +7,10 @@ from dotenv import load_dotenv
 # load .env
 load_dotenv()
 
-from backend.services.pdf_service import extract_text_from_file
-from backend.services.diff_service import compute_diff_and_stats
-from backend.services.ai_service import get_hf_summary
-from backend.utils.file_handler import save_uploaded_file
+from services.pdf_service import extract_text_from_file
+from services.diff_service import compute_diff_and_stats
+from services.ai_service import get_hf_summary
+from utils.file_handler import save_uploaded_file
 
 
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
@@ -19,7 +19,13 @@ os.makedirs(UPLOAD_FOLDER, exist_ok=True)
 
 app = Flask(__name__)
 app.config["UPLOAD_FOLDER"] = UPLOAD_FOLDER
-CORS(app, resources={r"/api/*": {"origins": "*"}})  # allow frontend dev server
+# allow frontend dev server
+CORS(
+    app,
+    supports_credentials=True,
+    resources={r"/api/*": {"origins": "*"}}
+)
+
 
 @app.route("/api/health", methods=["GET"])
 def health():
