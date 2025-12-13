@@ -1,7 +1,7 @@
 import axios from "axios";
 
 // Set your Render backend URL here
-const API_BASE = "https://ai-diff-backend.onrender.com/api";
+const API_BASE = "https://ai-difference-checker-6.onrender.com/api";
 
 // Function to upload two documents
 export const uploadDocuments = async (fileA, fileB) => {
