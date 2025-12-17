@@ -21,12 +21,12 @@ os.makedirs(UPLOAD_FOLDER, exist_ok=True)
 app = Flask(__name__)
 app.config["UPLOAD_FOLDER"] = UPLOAD_FOLDER
 # allow frontend dev server
+
 CORS(
     app,
     supports_credentials=True,
-    resources={r"/api/*": {"origins": "*"}}
+    resources={r"/api/*": {"origins": "https://ai-difference-checker-fr-git-c3640a-pradeepacharya123s-projects.vercel.app"}}
 )
-
 
 @app.route("/api/health", methods=["GET"])
 def health():
